@@ -1,0 +1,42 @@
+<!-- Post Card -->
+<table>
+  <tr>
+    <th style="background-image: url({{ site.github.url }}/assets/img/{{ post.image }}); background-repeat: no-repeat; background-size: contain; background-position: center; background-size: cover; background-blend-mode: screen; background-color: var(--gray);">
+      <!-- Post Title -->
+      <div style="float:left;"><i class="fa-sharp fa-solid fa-file"></i> {{ post.title }}</div>
+      <!-- Post Date -->
+      <div style="float:right;color:var(--graydark);font-size:1rem;" align="right">
+        <sup><i class="fa-regular fa-calendar"></i>&nbsp;{% assign _month = post.date | date: "%b" %}{{ _month }} {{ post.date | date: "%d" }} {{ post.date | date: "%Y" }}</sup>
+      </div>
+    </th>
+  </tr>
+  <tr height="16rem">
+    <td>
+      <div>
+        <!-- Post Blurb -->
+        <p>{{ post.blurb }}</p>
+        
+        
+        <div align="right">
+          <!-- Post URL -->
+          <!--<form action="{{ site.github.url }}{{ post.url }}"><button type="submit"><i class="fa-solid fa-book-open"></i> read</button></form>-->
+          <a href="{{ site.github.url }}{{ post.url }}"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;open</a>
+        </div>       
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+<!--
+<div style="float:left;margin-right:20px">
+  <img src="/assets/img/{{ post.image }}" style="margin-left:-25;height:8rem;width:8rem;object-fit:cover;overflow:hidden;opacity:.3;transform: skew(-6deg)">
+</div>
+-->

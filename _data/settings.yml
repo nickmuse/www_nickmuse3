@@ -1,0 +1,43 @@
+disqus:
+  comments: false
+  disqus_shortname: 'nickmuse.com'
+
+google-ID: 'G-WP1Y6QELVK'
+google-tag: 'GTM-PQVT46SV'
+
+menu:
+- {name: 'about',           url: 'about'}
+- {name: 'games',           url: 'games'}
+- {name: 'design',          url: 'design'}
+- {name: 'code',            url: 'code'}
+- {name: '35mm',            url: '35mm'}
+#-{name: 'Articles',        url: 'articles'}
+
+social:
+- {name: ' twitter', icon: 'twitter', link: 'https://twitter.com/nickmuse'}
+- {name: ' github',  icon: 'github',  link: 'https://github.com/nickmuse'}
+- {name: ' medium',  icon: 'medium',  link: 'https://medium.com/@nickmuse'}
+- {name: ' itch.io', icon: 'itch-io', link: 'https://nickmuse.itch.io'}
+- {name: ' steam', icon: 'steam', link: 'https://store.steampowered.com/developer/nickmuse'}
+#- {icon: 'facebook', link:   'https://www.facebook.com/johnsmith'}
+#- {icon: 'instagram', link:  'https://instagram.com/johnsmith'}
+#- {icon: 'envelope', link:   'mailto:johnsmith@example.com'}
+#- {icon: 'rss-square', link: 'feed.xml'}
+# - {icon: 'rss-square', link: 'rss-feed.xml'}
+
+
+pagination:
+  next_page: 'newer'
+  previous_page: 'older'
+
+hide_post_date: false
+
+sharing_button_prompt: 'Share this'
+hide_post_share: true
+
+related_posts: 'You may also enjoy...'
+hide_related_posts: true
+
+post_date_prefix: 'Created on'
+
+bottom_line: '2023 Nick Muse'

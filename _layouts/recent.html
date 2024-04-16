@@ -1,0 +1,10 @@
+---
+layout: default
+title: Recent Posts
+---
+
+<table><tr><th><i class="fa-sharp fa-solid fa-signal"></i> Recent Posts</th></tr></table>
+
+{% for post in paginator.posts %}
+  {% include postcard.html %}
+{% endfor %}

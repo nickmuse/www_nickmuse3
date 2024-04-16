@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<table>
+  <tr>
+    <th>
+      <i class="fa-sharp fa-solid fa-file"></i> {{ page.title }}
+    </th>
+  </tr>
+</table>
+
+<table style="padding:0;background-color: var(--col-body-bg);box-shadow:none;">
+  <tr>
+    <td>
+      {% if page.image %}
+        <img width="100%" src="{{ site.github.url }}/assets/img/{{ page.image }}">
+      {% endif %}
+      {{ content }}
+    </td>
+  </tr>
+</table>

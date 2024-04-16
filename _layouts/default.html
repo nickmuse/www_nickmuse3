@@ -1,0 +1,80 @@
+<!-- HTML -->
+<html data-theme="light">
+  <!-- Head -->
+  <head>
+    <!-- Title -->
+    <title>
+      {% if page.title == "Recent Posts" %}
+        {{ site.title }}
+      {% else %}
+        {{ page.title }} | {{ site.title }}
+      {% endif %}
+    </title>
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ site.github.url }}/assets/css/muse.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Consolas">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/45ec0bc322.js" crossorigin="anonymous"></script>
+    <!-- Atom -->
+    {% feed_meta %}
+    <!-- RSS-v2.0 -->
+    <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>-->
+    <!-- MathJax? -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ site.data.settings.google-tag }}');</script>
+    <!-- Jekyll SEO plugin -->
+    {% seo %}
+  </head>
+  <!-- Body -->
+  <body>
+    <!-- Top Bar -->
+    <div class="navigation">
+      <!-- Title -->
+      <div class="nav-left"><a href="{{ site.github.url }}/"><i class="fa-solid fa-chess-rook"></i>&nbsp;{{ site.title }}</a></div>
+      <!-- Nav Link -->
+      {% for item in site.data.settings.menu %}<div class="nav-left"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}
+      <!-- Dark Mode -->
+      <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label></div>
+      <!-- Socials -->
+      {% for item in site.data.settings.social %}<div class="nav-right"><a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a></div>{% endfor %}
+    </div>
+    <!-- Bottom Content -->
+    <div class="content">
+      <!-- Right Pane -->
+      <div class="pane-right">
+        <!-- Display Frame -->
+        {{ content }}
+      </div>
+      <!-- Left Pane -->
+      <div class="pane-left">
+        <!-- Nav Link -->
+        <table>
+          <tr>
+            <th>
+              <i class="fa-solid fa-terminal"></i> menu
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <code style="width:calc(100% - 40px);">
+              {% for item in site.data.settings.menu %}
+                <a href="{{ site.github.url }}/{{ item.url }}" style="font-family: Consolas;">$ ./{{ item.name }}</a><br>
+              {% endfor %}
+              
+            </code>
+            </td>
+          </tr>
+        </table>
+        <!-- Joke -->
+        <table><tr><th><i class="fa-solid fa-key"></i> login</th></tr><tr><td><center><input type="text" placeholder="username"></input><br><input type="password" placeholder="password"></input><br><button>login</button><button>reset</button><br></center></td></tr></table>
+      </div>
+
+    </div>
+    <!-- Google -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.data.settings.google-tag }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Dark Mode -->
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/toggle_dark.js"></script>
+  </body>
+</html>

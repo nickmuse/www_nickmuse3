@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<table><tr><th><i class="fa-sharp fa-solid fa-folder"></i> {{ page.category }}</th></tr></table>
+{% for post in site.posts %}
+  {% if post.categories contains page.category %}
+    {% include postcard.html %}
+  {% endif %}
+{% endfor %}

@@ -33,12 +33,13 @@
     <div class="navigation">
       <!-- Title -->
       <div class="nav-left"><a href="{{ site.github.url }}/"><i class="fa-solid fa-chess-rook"></i>&nbsp;{{ site.title }}</a></div>
-      <!-- Nav Link -->
-      {% for item in site.data.settings.menu %}<div class="nav-left"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}
+      
       <!-- Dark Mode -->
       <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label><i class="fa-solid fa-masks-theater"></i></div>
+      <!-- Nav Link -->
+      {% for item in site.data.settings.menu reversed %}<div class="nav-right"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}
       <!-- Socials -->
-      {% for item in site.data.settings.social %}<div class="nav-right"><a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a></div>{% endfor %}
+      <!-- {% for item in site.data.settings.social %}<div class="nav-right"><a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a></div>{% endfor %} -->
     </div>
     <!-- Bottom Content -->
     <div class="content">

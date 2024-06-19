@@ -4,16 +4,17 @@
   <head>
     <!-- Title -->
     <title>
-      {% if page.title == "Recent Posts" %}
-        {{ site.title }}
-      {% else %}
+      {% if page.title %}
         {{ page.title }} | {{ site.title }}
+      {% else %}
+        {{ site.title }}
       {% endif %}
     </title>
     <!-- Style -->
     <link rel="stylesheet" href="{{ site.github.url }}/assets/css/muse.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Consolas">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Consolas|Montserrat:100,300,600">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/45ec0bc322.js" crossorigin="anonymous"></script>
     <!-- Atom -->
@@ -32,46 +33,20 @@
     <!-- Top Bar -->
     <div class="navigation">
       <!-- Title -->
-      <div class="nav-left"><a href="{{ site.github.url }}/"><i class="fa-solid fa-chess-rook"></i>&nbsp;{{ site.title }}</a></div>
-      
+      <div class="nav-left"><a href="{{ site.github.url }}/"><i class="fa-solid fa-chess-rook" style="margin-right:.4rem;"></i><p>{{ site.title }}</p></a></div>
       <!-- Dark Mode -->
-      <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label><i class="fa-solid fa-masks-theater"></i></div>
+      <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label><i class="fa-solid fa-masks-theater" style="margin-right:.4rem;"></i></div>
       <!-- Nav Link -->
-      {% for item in site.data.settings.menu reversed %}<div class="nav-right"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}
+      <!--{% for item in site.data.settings.menu reversed %}<div class="nav-right"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}-->
       <!-- Socials -->
-      <!-- {% for item in site.data.settings.social %}<div class="nav-right"><a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a></div>{% endfor %} -->
+      {% for item in site.data.settings.social %}<div class="nav-right"><a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a></div>{% endfor %}
     </div>
     <!-- Bottom Content -->
-    <div class="content">
-      <!-- Right Pane -->
-      <div class="pane-right">
-        <!-- Display Frame -->
+    <div class="page-container">
+      <div class="page">
         {{ content }}
+        {% include circle.html %}
       </div>
-      <!-- Left Pane -->
-      <div class="pane-left">
-        <!-- Nav Link -->
-        <table>
-          <tr>
-            <th>
-              <i class="fa-solid fa-terminal"></i> menu
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <code style="width:calc(100% - 40px);">
-              {% for item in site.data.settings.menu %}
-                <a href="{{ site.github.url }}/{{ item.url }}" style="font-family: Consolas;">$ ./{{ item.name }}</a><br>
-              {% endfor %}
-              
-            </code>
-            </td>
-          </tr>
-        </table>
-        <!-- Joke -->
-        <table><tr><th><i class="fa-solid fa-key"></i> login</th></tr><tr><td><center><input type="text" placeholder="username"></input><br><input type="password" placeholder="password"></input><br><button>login</button><button>reset</button><br></center></td></tr></table>
-      </div>
-
     </div>
     <!-- Google -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.data.settings.google-tag }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

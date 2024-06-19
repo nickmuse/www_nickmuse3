@@ -1,10 +1,15 @@
 ---
 layout: default
-title: Recent Posts
 ---
 
-<table><tr><th><i class="fa-solid fa-satellite"></i> Recent Posts</th></tr></table>
+<!--<h1><i class="fa-solid fa-satellite"></i> Recent Posts</th></tr></table></h1><br><br>-->
+<center>
 
+<!-- Posts -->
 {% for post in paginator.posts %}
   {% include postcard.html %}
 {% endfor %}
+
+{% include paginator.html %}
+
+</center>

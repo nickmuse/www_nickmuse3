@@ -1,0 +1,50 @@
+<style>
+    .lib {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+    .lib p {margin:1rem;}
+    .lib h2 {margin:1rem;}
+    .lib img {
+        border: 2px solid var(--col-body-bg-next);
+        width: 100%;
+        object-fit: cover;
+    }
+    .lib-left {
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+    .lib-right {
+        flex: 0 0 70%;
+        box-sizing: border-box;
+    }
+    .lib-itch-button {
+        background-color:var(--col-body-bg-next);
+        text-align:center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .lib-itch-button h2 {
+        margin:.5rem;
+    }
+</style>
+
+<div class="lib">
+    <div class="lib-left">
+        <img src="/assets/img/{{ codelib.image }}" alt="{{ codelib.name }}">
+    </div>
+    <div class="lib-right">
+        <h2>{{ codelib.name }}</h2>
+        <p>{{ codelib.blurb }}</p>
+        <div align="right">
+            <a href="{{ codelib.itch }}" target="_blank">
+                <div class="lib-itch-button">
+                    <h2>
+                        <i class="fab fa-itch-io" aria-hidden="true"></i>&nbsp;view on itch.io
+                    </h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

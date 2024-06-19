@@ -2,21 +2,10 @@
 layout: default
 ---
 
-<table>
-  <tr>
-    <th>
-      {{ page.icon }} {{ page.title }}
-    </th>
-  </tr>
-</table>
-
-<table style="padding:0;background-color: var(--col-body-bg);box-shadow:none;">
-  <tr>
-    <td>
-      {% if page.image %}
-        <img width="100%" src="{{ site.github.url }}/assets/img/{{ page.image }}">
-      {% endif %}
-      {{ content }}
-    </td>
-  </tr>
-</table>
+<div class="article">
+    {% if page.banner %}<img width="100%" src="{{ site.github.url }}/assets/img/{{ page.banner }}">{% endif %}
+    {% if page.blurb_post_display == 1 %}
+        <h1>{{ page.blurb }}</h1>
+    {% endif %}
+    {{ content }}
+</div>

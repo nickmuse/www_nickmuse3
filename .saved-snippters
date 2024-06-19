@@ -1,0 +1,160 @@
+/* divs for splitting content screen */
+.content {
+    /* pushes nav-divs to page edges, tucks scroll bar.
+    /*overflow-y                  : scroll;*/
+}
+.pane-left              {
+    height                      : 100%;
+    width                       : 30%;
+    float                       : left;
+    text-align                  : right;
+}
+.pane-right             {
+    height                      : 100%;
+    width                       : 70%;
+    float                       : right;
+    text-align                  : left;
+    overflow-x                  : hidden;
+    overflow-y                  : scroll; /*scroll*/
+    scroll-snap-type            : y proximity;
+    scroll-padding              : 40px; /* should match table top margin */
+}
+.pane-left table {
+    width                       : auto;
+    margin-right                : 1rem;
+    min-width                   : 300px;
+    max-width                   : 300px;
+}
+.pane-right table {
+    margin-left: 1rem
+}
+@media (max-width: 1080px) { /* pane stuff collapsed */
+    body {
+        overflow-y: hidden;
+    }
+    .content {
+        height                  : 100%;
+        scroll-snap-type        : y proximity;
+        scroll-padding          : 40px;
+        overflow-y              : scroll;
+        width                   : 100%;
+    }
+    .pane-left {
+        width                   : 100%;
+        height                  : auto;
+    }
+    .pane-right {
+        float                   : right;
+        width                   : 100%; /* Adjust width for smaller screens */
+        height                  : auto;
+        overflow-y              : hidden;
+        overflow-x              : hidden;
+    }
+    .pane-left table {
+        width                   : 100%;
+        margin-right            : auto;
+        display                 : none;
+    }
+    .pane-right table {
+        margin-left             : auto;
+        width                   : 100%;
+    }
+    body {
+        overflow-y              : auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+
+<p>I enjoy drives east, drives west, architecture, design, nature, old cities, geopolitical history, literature, thrifting, film, motorsports, a game of chess, late summer ferries, the stillness after it snows, sports with my friends, and taking things apart to see how they work.</p>
+
+<center>
+    {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true" style="padding:10px;"></i></a>
+    {% endfor %}
+</center>
+
+{% endcomment %}
+
+
+
+<h2>enjoys</h2>
+<br><br>
+<ul class="tag-list">
+    <li class="tag">drives east</li>
+    <li class="tag">drives west</li>
+    <li class="tag">architecture</li>
+    <li class="tag">design</li>
+    <li class="tag">nature</li>
+    <li class="tag">old cities</li>
+    <li class="tag">geopolitical history</li>
+    <li class="tag">literature</li>
+    <li class="tag">thrifting</li>
+    <li class="tag">film</li>
+    <li class="tag">motorsports</li>
+    <li class="tag">a game of chess</li>
+    <li class="tag">late summer ferries</li>
+    <li class="tag">the stillness after it snows</li>
+    <li class="tag">sports with my friends</li>
+    <li class="tag">taking things apart to see how they work</li>
+  </ul>
+
+
+
+  <iframe frameborder="0" src="https://itch.io/embed/568331" width="100%" height="167"><a href="https://nickmuse.itch.io/ezpz">ezpz by nickmuse</a></iframe>
+  <iframe frameborder="0" src="https://itch.io/embed/840203" width="100%" height="167"><a href="https://nickmuse.itch.io/parallax-plus">Parallax Plus by nickmuse</a></iframe>
+  <iframe frameborder="0" src="https://itch.io/embed/1792742" width="100%" height="167"><a href="https://nickmuse.itch.io/numroll">numroll by nickmuse</a></iframe>
+
+
+
+  # POSTCARD
+<!--<i class="fa-sharp fa-solid fa-file"></i> -->
+<!--<p style="color:var(--gray)"><i class="fa-regular fa-calendar"></i>&nbsp;{% assign _month = post.date | date: "%b" %}{{ _month }} {{ post.date | date: "%d" }} {{ post.date | date: "%Y" }}</p>-->
+
+
+# POSTCARD FOR LOOP
+{% assign mod = forloop.index | modulo: 2 %}
+{% assign mod = 1 %}
+<div class="postcard-text" style="text-align:{% if mod == 0 %}left{% else %}right{% endif %};"></div>
+
+
+
+
+# SPORTS LOGOS
+---
+layout: post
+title: "logo design"
+author: "Nick Muse"
+categories: design
+tags: [art]
+image: mothmen_group.jpg
+blurb: "logo design for the Legends of Legion charity football league"
+---
+Logos I designed for the Legends of Legion charity football league.
+### Shirley Estate Mothmen
+<img width="100%" src="{{ site.github.url }}/assets/img/mothmen.png">
+### Neighborhood Roadies
+<img width="100%" src="{{ site.github.url }}/assets/img/roadies.png">
+<img width="100%" src="{{ site.github.url }}/assets/img/roadies_group.jpg">
+
+
+
+# mobspawn CREDITS
+<!--
+<i class="fa-solid fa-clapperboard"></i> Code + Art by [Jamie Rowan](D) and [Nick Muse](https://twitter.com/nickmuse)
+<i class="fa-solid fa-music"></i> Music by [dedeco](https://twitter.com/dedeco_VGMDJ)
+<i class="fa-solid fa-paintbrush"></i> Key Art by [Harry Sussams](https://www.harrysussams.com/)
+-->

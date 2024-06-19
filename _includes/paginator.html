@@ -1,0 +1,19 @@
+
+{% if paginator.total_pages > 1 %}
+  <!-- Previous -->
+  {% if paginator.previous_page %}
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+  {% else %}
+    <span>{{ site.data.settings.pagination.next_page }}</span>
+  {% endif %}
+  
+  <!-- Next -->
+  {% if paginator.next_page %}
+    <a href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
+  {% else %}
+    <span>{{ site.data.settings.pagination.previous_page }}</span>
+  {% endif %}
+  
+  <!-- Page Number -->
+  <br><sup>{{ paginator.page }} / {{ paginator.total_pages }}</sup>
+{% endif %}

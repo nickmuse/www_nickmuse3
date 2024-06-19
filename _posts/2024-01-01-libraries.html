@@ -1,0 +1,47 @@
+---
+layout: post
+title: "libraries"
+author: "Nick Muse"
+categories: code
+tags: [code]
+banner: 
+thumbnail: parallaxplus.gif
+blurb: "gml code libraries"
+blurb_post_display: 1
+---
+
+<style>
+    .lib {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+    .lib p {margin:1rem;}
+    .lib h2 {margin:1rem;}
+    .lib img {
+        border: 2px solid var(--gray);
+        width: 100%;
+        object-fit: cover;
+    }
+    .lib-left {
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+    .lib-right {
+        flex: 0 0 70%;
+        box-sizing: border-box;
+    }
+    .lib-itch-button {
+        background-color:var(--graydark);
+        text-align:center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .lib-itch-button h2 {
+        margin:.5rem;
+    }
+</style>
+
+{% for codelib in site.codelibs %}
+    {% include codelib.html %}
+{% endfor %}

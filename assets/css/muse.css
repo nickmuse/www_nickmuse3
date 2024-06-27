@@ -58,7 +58,7 @@
 /*                                                            */
 /**************************************************************/
 
-html[data-theme="light"] {
+html[data-theme="light"] .theme {
     --col-body-bg               : var(--white);
     --col-body-bg-next          : var(--graylight);
     --col-text-regular          : var(--black);
@@ -79,7 +79,7 @@ html[data-theme="light"] {
     --col-slider-face           : var(--graylight);
     --col-slider-edge           : var(--graydark);
 }
-html[data-theme="dark"] {
+html[data-theme="dark"] .theme {
     --col-body-bg               : var(--black);
     --col-body-bg-next          : var(--graydark);
     --col-text-regular          : var(--white);
@@ -100,13 +100,13 @@ html[data-theme="dark"] {
     --col-slider-face           : var(--gray);
     --col-slider-edge           : var(--graydark);
 }
-[data-theme="light"] table {
+html[data-theme="light"] table {
     /*box-shadow: var(--black) 0 2px 6px 0;*/
     box-shadow                  : var(--gray) 2.5rem 1rem 0rem 0rem;
     box-shadow                  : color-mix(in srgb, var(--gray), transparent 90%) .2rem .9rem 0rem 0rem;
     box-shadow                  : color-mix(in srgb, var(--graydark), transparent 90%) 0 2px 19px 0;
 }
-[data-theme="dark"] table {
+html[data-theme="dark"] table {
     /*box-shadow: 0px 0px 0px 0px;*/
     box-shadow                  : var(--graydark) 0rem 0rem 0rem 0rem;
     /*box-shadow: color-mix(in srgb, var(--gray), transparent 90%) 0rem .7rem 0rem 0rem;*/

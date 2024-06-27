@@ -58,7 +58,7 @@
 /*                                                            */
 /**************************************************************/
 
-[data-theme="light"] {
+html[data-theme="light"] {
     --col-body-bg               : var(--white);
     --col-body-bg-next          : var(--graylight);
     --col-text-regular          : var(--black);
@@ -79,7 +79,7 @@
     --col-slider-face           : var(--graylight);
     --col-slider-edge           : var(--graydark);
 }
-[data-theme="dark"] {
+html[data-theme="dark"] {
     --col-body-bg               : var(--black);
     --col-body-bg-next          : var(--graydark);
     --col-text-regular          : var(--white);

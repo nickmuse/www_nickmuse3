@@ -14,11 +14,12 @@ menu:
 #-{name: 'Articles',        url: 'articles'}
 
 social:
+- {name: ' bsky',    icon: 'bsky',    link: 'https://bsky.app/profile/nickmuse.bsky.social'}
 - {name: ' twitter', icon: 'twitter', link: 'https://twitter.com/nickmuse'}
 - {name: ' github',  icon: 'github',  link: 'https://github.com/nickmuse'}
 - {name: ' medium',  icon: 'medium',  link: 'https://medium.com/@nickmuse'}
 - {name: ' itch.io', icon: 'itch-io', link: 'https://nickmuse.itch.io'}
-- {name: ' steam', icon: 'steam', link: 'https://store.steampowered.com/developer/nickmuse'}
+- {name: ' steam',   icon: 'steam',   link: 'https://store.steampowered.com/developer/nickmuse'}
 #- {icon: 'facebook', link:   'https://www.facebook.com/johnsmith'}
 #- {icon: 'instagram', link:  'https://instagram.com/johnsmith'}
 #- {icon: 'envelope', link:   'mailto:johnsmith@example.com'}

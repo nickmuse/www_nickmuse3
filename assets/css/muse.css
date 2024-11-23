@@ -527,11 +527,6 @@ input:checked + .slider:hover:before {
     height          : 100%;
     object-fit      : cover;
 }
-@media(max-width:768px) {
-    .gallery {
-        flex-direction: column;
-    }
-}
 
 /* divs for nav screen */
 .navigation a {

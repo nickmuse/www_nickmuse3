@@ -44,6 +44,11 @@
       display                 : inline-block;
       max-width               : 100%;
   }
+  .postcard-blurb {
+      color                   : var(--col-text-code);
+      font-size               : var(--font-size-tiny);
+      font-size               : 0.9rem;
+  }
 </style>
 
 <div class="postcard">
@@ -51,7 +56,8 @@
     <div class="postcard-text">
       <div class="postcard-text-inner">
         <h2 class="postcard-header">{{ post.title }}</h2>
-        <p>{{ post.blurb }}</p>
+        <br>
+        <p class="postcard-blurb">{{ post.blurb }}</p>
       </div>
     </div>
     {% if post.thumbnail contains ".webm" %}

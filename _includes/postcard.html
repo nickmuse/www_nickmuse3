@@ -1,13 +1,14 @@
 <!-- Post Card -->
 <style>
   .postcard {
+      --anim-time             : .4s;
       width                   : 600px;
       height                  : 160px;
       margin-top              : 48px;
       margin-bottom           : 48px;
       position                : relative;
       box-shadow              : -.5rem .5rem 0rem var(--col-body-bg-next);
-      animation               : iso_to_straight 1s ease forwards;
+      animation               : iso_to_straight var(--anim-time) ease forwards;
       background-color        : var(--col-body-bg);
   }
   .postcard:hover {
@@ -71,7 +72,9 @@
 
 {% if forloop.index %}{% assign i = forloop.index0 %}{% else %}{% assign i = 0 %}{% endif %}
 {% assign z = 1000 | minus: i %}
-<div class="postcard" style="transform: translateY({{ -10 | times: i }}rem) rotateX(45deg) rotateZ(-45deg); z-index: {{ z }};">
+<div class="postcard" style="
+  transform: translateY({{ -10 | times: i }}rem) rotateX(45deg) rotateZ(-45deg); z-index: {{ z }};
+">
   <a href="{{ site.github.url }}{{ post.url }}" class="postcard">
     <div class="postcard-text">
       <div class="postcard-text-inner">

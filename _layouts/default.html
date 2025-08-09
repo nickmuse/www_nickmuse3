@@ -12,6 +12,7 @@
     </title>
     <!-- Style -->
     <link rel="stylesheet" href="https://nickmuse.github.io/muse.css/muse.css">
+    <!--<link rel="stylesheet" href="/assets/css/muse.css">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Consolas|Montserrat:100,300,600">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <!-- Icons -->
@@ -32,9 +33,14 @@
     <!-- Top Bar -->
     <div class="navigation">
       <!-- Title -->
-      <div class="nav-left"><a href="{{ site.github.url }}/"><i class="fa-solid fa-chess-rook" style="margin-right:.4rem;"></i><p>{{ site.title }}</p></a></div>
+      <div class="nav-left">
+        <a href="{{ site.github.url }}/">
+            <i class="fa-solid fa-acorn" style="margin-right:.4rem;"></i>
+             <code>#&nbsp;nickmuse.com&nbsp;~&nbsp;<span class="blinking">█</span></code>
+        </a>
+      </div>
       <!-- Dark Mode -->
-      <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label><i class="fa-solid fa-masks-theater" style="margin-right:.4rem;"></i></div>
+      <div class="nav-right"><label class="switch"><input name="toggle_dark" type="checkbox"><span class="slider"></span></label></div>
       <!-- Nav Link -->
       <!--{% for item in site.data.settings.menu reversed %}<div class="nav-right"><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></div>{% endfor %}-->
       <!-- Socials -->

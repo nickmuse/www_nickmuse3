@@ -34,9 +34,13 @@
     <div class="navigation">
       <!-- Title -->
       <div class="nav-left">
+        {% if page.title %}
+          {% assign nav_dir = '/' | append: page.dir %}
+        {% else %}
+          {% assign nav_dir = '' %}
+        {% endif %}
         <a href="{{ site.github.url }}/">
-            <i class="fa-solid fa-acorn" style="margin-right:.4rem;"></i>
-             <code>#&nbsp;nickmuse.com&nbsp;~&nbsp;<span class="blinking">█</span></code>
+          <code>#&nbsp;nickmuse.com&nbsp;~{{ nav_dir }}&nbsp;<span class="blinking">█</span></code>
         </a>
       </div>
       <!-- Dark Mode -->

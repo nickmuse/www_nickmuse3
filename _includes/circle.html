@@ -1,13 +1,8 @@
 <style>
-  /*
-  .circle-container {border: 2px red solid;}
-  .bar-container {border: 2px red solid;}
-  .bar {border: 2px blue solid;}
-  */
   :root {
     --edge-buffer               : 2rem;
-    --circle-width              : 140px;
-    --line-width                : 10px;
+    --circle-width              : 300px;
+    --line-width                : 15px;
     --ease-type                 : ease-in-out;
     --start-rotation            : 405deg;
     --square-width              : 60px;
@@ -55,39 +50,6 @@
   @keyframes spin {
     000% {transform: rotate(var(--start-rotation));}
     100% {transform: rotate(calc(var(--start-rotation) + 360deg));}
-  }
-  
-  .bar-container {
-    z-index                     : -100;
-    position                    : fixed;
-    width                       : var(--line-width);
-    top                         : 75%;
-    right                       : var(--edge-buffer);
-    bottom                      : calc(var(--edge-buffer) + calc(var(--circle-width) / 2));
-  }
-  .bar {
-    width                       : 100%;
-    background-color            : var(--col-body-bg-next);
-    animation                   : schloop 4s var(--ease-type) infinite;
-    -webkit-animation           : schloop 4s var(--ease-type) infinite;
-    position                    : absolute;
-
-    top:0;
-    height:calc(100% - 75px);
-  }
-  @keyframes schloop {
-    0% {
-        top                     : 0;
-        height                  : 0;
-    }
-    50% {
-        top                     : 0;
-        height                  : 100%;
-    }
-    100% {
-        top                     : 100%;
-        height                  : 0;
-    }
   }
   .square-container {
     z-index                     : -100;
@@ -164,5 +126,4 @@
 <div class="circle-container"><div class="circle circle1"></div></div>
 <div class="circle-container"><div class="circle circle2"></div></div>
 <div class="circle-container"><div class="circle circle3"></div></div>
-<div class="bar-container"><div class="bar"></div></div>
 <!--<div class="square-container"><div class="square"></div></div>-->

@@ -1,6 +1,6 @@
 ---
 name: ezpz
-blurb: A single-script solution for tweening, easing, etc.
+blurb: a microsolution for easing + tweening
 image: ezpz.gif
 itch: https://nickmuse.itch.io/ezpz
 ---

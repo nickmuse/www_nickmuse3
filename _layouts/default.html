@@ -35,12 +35,12 @@
       <!-- Title -->
       <div class="nav-left">
         {% if page.title %}
-          {% assign nav_dir = '/' | append: page.dir %}
+          {% assign nav_dir = '/' | append: page.dir | append: ' #' %}
         {% else %}
-          {% assign nav_dir = '' %}
+          {% assign nav_dir = ' #' %}
         {% endif %}
         <a href="{{ site.github.url }}/">
-          <code>#&nbsp;nickmuse.com&nbsp;~{{ nav_dir }}&nbsp;<span class="blinking">█</span></code>
+          <code>nickmuse.com&nbsp;~{{ nav_dir }}&nbsp;<span class="blinking">█</span></code>
         </a>
       </div>
       <!-- Dark Mode -->
